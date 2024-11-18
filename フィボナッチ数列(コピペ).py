@@ -1,4 +1,4 @@
-#フィボナッチ数列(コピペ)
+#フィボナッチ数列(コピペ,自作じゃないです)
 import sympy as sym # sympyのインポート
 def Fib(n):
     x = sym.symbols('x', nonnegative=True, integer=True)
