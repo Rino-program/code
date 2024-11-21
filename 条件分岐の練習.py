@@ -1,4 +1,5 @@
 #条件分岐の練習
+#git test
 x=input("数字を入力")
 try:
     x=int(x)
