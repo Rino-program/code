@@ -8,4 +8,4 @@ def two_ten(x):
         if y[i]=="1":
             z+=2**i
     return z
-print(two_ten(input("2進数→10進数変換機\n2進数入力してください。")))
+print(two_ten(input("2進数→10進数変換機\n2進数を入力してください。")))
