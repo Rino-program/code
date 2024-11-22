@@ -6,4 +6,4 @@ def li(x):
       pass
     elif x[i] > x[i+1]:
       x.insert(i,x[i+1])
-print(li(map(int,input("リストを入力してください。").split(","))))
+print(li(list(map(int,input("リストを入力してください。").split(",")))))
