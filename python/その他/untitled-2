@@ -1,0 +1,30 @@
+#include <cstdio>
+#include <cstdlib>
+
+int main() {
+    const char* x_str = "10";
+    int x;
+    int error = 0;
+
+    // 文字列を整数に変換
+    x = std::atoi(x_str);
+
+    if (x == 0 && x_str[0] != '0') {
+        std::printf("エラー（数字ではない可能性があります）\n");
+        error = 1;
+    }
+
+    if (error == 0) {
+        if (x == 10) {
+            std::printf("１０です\n");
+        } else if (x > 10) {
+            std::printf("１０より大きいです\n");
+        } else {
+            std::printf("１０より小さいです\n");
+        }
+    }
+
+    std::printf("最終結果：x==%d, error==%d\n", x, error);
+
+    return 0;
+}
