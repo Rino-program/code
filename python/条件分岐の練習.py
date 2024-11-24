@@ -11,4 +11,4 @@ try:
         print("１０より小さいです")
 except:
     print("エラー（数字ではない可能性があります）")
-print("最終結果：x=={},type(x)=={},error=={}".format(x,type(x)))
+print("最終結果：x=={},type(x)=={}".format(x,type(x)))
