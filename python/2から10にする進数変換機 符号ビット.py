@@ -10,4 +10,4 @@ def two_ten(two):
     if  minus==1:
         x=-x
     return x
-print(two_ten(input("2進数を入力してください。(10進数にしたときの整数のみ対応,符号ビットを使用します。)")))
+print(two_ten(input("2進数を入力してください。(10進数にしたときの整数のみ対応,符号ビットを使用してください。)")))
