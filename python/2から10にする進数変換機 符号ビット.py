@@ -1,7 +1,8 @@
 def two_ten(two):
-    x,two=0,str(two)
+    x,two,minus=0,str(two),0
     y=two[1:]
-    minus=0
+    if len(two) == 1:
+        return int(two)
     if two[0]=="1":
         minus=1
     for index,digit in enumerate(reversed(y)):

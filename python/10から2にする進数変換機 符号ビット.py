@@ -1,6 +1,8 @@
 def ten_two(ten):
     x,li=ten,[]
     ten=abs(ten)
+    if ten == 0:
+        li.insert(0, 0)
     while ten!=0:
         li.insert(0,ten%2)
         ten=ten//2
