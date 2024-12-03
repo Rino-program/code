@@ -1,4 +1,4 @@
-#Microsoft Copilotからの出題(練習) ～ピタゴラスの三つ組の列挙～
+#Microsoft Copilotからの出題(練習) ピタゴラスの三つ組
 def fpt(num):
     li=[]
     for i in range(1,num):
