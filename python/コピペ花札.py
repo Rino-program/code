@@ -44,6 +44,7 @@ def play_game():
                 card = hands[i].pop()
                 print(f"Player {i + 1} plays {card}")
                 field.append(card)
+                print(f"Current field: {field}")
             else:
                 print(f"Player {i + 1} has no cards left")
 
