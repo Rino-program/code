@@ -53,9 +53,10 @@ def play_game():
             if pairs:
                 print(f"Pairs formed: {pairs}")
                 for pair in pairs:
-                    field.remove(pair[0])
-                    field.remove(pair[1])
-                    hands[i].extend(pair)  # 取得した札をプレイヤーに追加
+                    if pair[0] in field and pair[1] in field:
+                        field.remove(pair[0])
+                        field.remove(pair[1])
+                        hands[i].extend(pair)  # 取得した札をプレイヤーに追加
 
 # 役の判定と点数計算
 def calculate_score(hand):
