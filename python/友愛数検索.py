@@ -14,7 +14,7 @@ def pn(num):
             if t==0:
                 num_keep2=sum(li)
                 t=1
-        if numr_keep==numr and numr!=num_keep2 and (num_keep2,numr) not in lit:
+        if numr_keep==numr and numr!=num_keep2 and numr<num_keep2:
             lit.append((numr,num_keep2))
     return lit
 print(pn(int(input("回数"))))
