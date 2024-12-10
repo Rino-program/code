@@ -11,5 +11,5 @@ def pn(num):
         if t==0:
             num_keep2=sum(li)
             t=1
-    return f"{num}と{num_keep2}は友愛数です。"if num_keep==num and num_keep!=1 else f"{num_keep}は友愛数ではありません。"
+    return f"{num}と{num_keep2}は友愛数です。"if num_keep==num and num_keep!=1 and num!=num_keep2 else f"{num_keep}は友愛数ではありません。"
 print(pn(int(input("数を入力"))))
