@@ -1,6 +1,8 @@
 def tnkl(num):
+    if num!=0:
+        print([1])
     lit=[1,1]
-    for i in range(num):
+    for i in range(num-1):
         print(lit)
         li=[1,1]
         for j in range(len(lit)-1):
