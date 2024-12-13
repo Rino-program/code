@@ -2,10 +2,15 @@ def tngrs(numa,numb,numc):
     lia,lib,lic=[],[],[]
     if "√" in numa or "√" in numb or "√" in numc:
         if "√" in numa:
-            lia=numa.split("ルート")
+            lia=numa.split("√")
+            lia=(lia[0]**2)*lia[1]
+        if "√" in numb:
+            lib=numb.split("√")
+        if "√" in numc:
+            lic=numc.split("√")
     x_index,cr=0,0
     if not numa:
-        x_index+=3
+        x_index+=c
     if not numb:
         x_index+=4
     if not numc:
