@@ -1,4 +1,8 @@
 def tngrs(numa,numb,numc):
+    lia,lib,lic=[],[],[]
+    if "√" in numa or "√" in numb or "√" in numc:
+        if "√" in numa:
+            lia=numa.split("ルート")
     x_index,cr=0,0
     if not numa:
         x_index+=3
