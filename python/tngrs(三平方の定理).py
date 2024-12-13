@@ -1,16 +1,19 @@
 def tngrs(numa,numb,numc):
+    import math
     lia,lib,lic=[],[],[]
     if "√" in numa or "√" in numb or "√" in numc:
         if "√" in numa:
             lia=numa.split("√")
-            lia=(lia[0]**2)*lia[1]
+            numa=math.sqrt((lia[0]**2)*lia[1])
         if "√" in numb:
             lib=numb.split("√")
+            numb=math.sqrt((lib[0]**2)*lib[1])
         if "√" in numc:
             lic=numc.split("√")
+            numc=math.sqrt((lic[0]**2)*lic[1])
     x_index,cr=0,0
     if not numa:
-        x_index+=c
+        x_index+=3
     if not numb:
         x_index+=4
     if not numc:
