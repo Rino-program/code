@@ -32,6 +32,6 @@ def heihoukon(num):
                             i+=1
             li.append(numa)
             if numa in li:
-                li.pop(li.index(i))
+                li.pop(li.index(numa))
                 a*=numa
             
