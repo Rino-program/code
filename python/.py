@@ -6,8 +6,9 @@ def heihoukon(num):
             lia=num.split("√")
             num=math.sqrt((lia[0]**2)*lia[1])
             hei=1
+            return num
         elif num[0]=="√":
-            li=[]
+            li,numa=[],int(num[1:])
             def pnf(x):
                 if x%2==0:
                     return False
@@ -15,6 +16,22 @@ def heihoukon(num):
                     if x%i==0:
                         return False
                 return True
-            for i in range(2,int(num[1:])/2):
+            a=1
+            while not pnf(numa):
+                i=2
                 if pnf(i):
-                    
+                    if numa%i==0:
+                        numa/=i
+                        if i in li:
+                            li.pop(li.index(i))
+                            a*=i
+                        else:
+                            li.append(i)
+                    else:
+                        while not pnf(i):
+                            i+=1
+            li.append(numa)
+            if numa in li:
+                li.pop(li.index(i))
+                a*=numa
+            
