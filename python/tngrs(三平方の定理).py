@@ -42,8 +42,5 @@ def tngrs(numa,numb,numc):
         return cr**(1/2)
     else:
         return "√"+str(cr)
-an,bn,cn=0,0,0
-an=input("aを入力")
-bn=input("bを入力")
-cn=input("cを入力")
+an,bn,cn=input("aを入力"),input("bを入力"),input("cを入力")
 print(tngrs(an,bn,cn))
