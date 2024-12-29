@@ -1,6 +1,6 @@
 def pn(num):
     lit=[]
-    for numr in range(220,num+1):
+    for numr in range(num+1):
         numr_keep=numr
         for j in range(2):
             li=[1]
