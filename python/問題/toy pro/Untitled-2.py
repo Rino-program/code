@@ -82,12 +82,16 @@ def kill_mino(a, x, y, HP):
 if kill_mino(a, x, y, HP) == 0:
     print("このままじゃ倒せない！撤退だ！")
 else:
-    turn = 1
-    while HP > 0:
+    turn = 0
+    while HP >= 0:
+        turn += 1
         HP -= a
-        if turn % x == 0:
-            HP += y #表示ミスかも？
         if HP <= 0:
             break
-        turn += 1
+        if turn % x == 0:
+            HP += y #表示ミスかも？
     print(f"{turn}回")
+
+"""
+print(a,x,y,HP)
+"""
