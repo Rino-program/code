@@ -95,7 +95,6 @@ def sbin_find(S, i, n): # 指定された's'から始まる最短の's'->'b'->'i
 for i in range(n): #Sの中で's'の場所を探す。
     if S[i] == "s":
         m = min(m, sbin_find(S, i+1, n))
-
 if m == 101:
     print("No")
 else:
