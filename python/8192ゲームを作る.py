@@ -6,7 +6,7 @@ count = 0
 while True:
     print(f"{count+1}回目。\nあと{13-count}回です。")
     i = input("青か緑を入力してください。")
-    x = 0 # テストのため、1にしています。
+    x = random.randint(0, 1)
     if i == "青":
         i = 0
     elif i == "緑":
