@@ -7,6 +7,9 @@ while True:
     print(f"{count+1}回目。\nあと{13-count}回です。\n当てれる確率は 1/{2**count+1} です。")
     i = input("青か緑を入力してください。")
     x = random.randint(0, 1)
+    if count == 0 and 2468 == random.randint(1,8192):
+        print("あなたは8192分の1を当てました！(裏ルート)")
+        break
     if i == "青":
         i = 0
     elif i == "緑":
@@ -23,5 +26,3 @@ while True:
     if count == 13:
         print("13回当てました。クリアです!")
         break
-    if count == 0 and 2468 == random.randint(1,8192):
-        print("あなたは8192分の1を当てました！(裏ルート)")
