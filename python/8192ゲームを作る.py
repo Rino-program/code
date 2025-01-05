@@ -1,0 +1,25 @@
+# 8192ゲームを作る
+# 1/2を13回当てるゲーム
+import random
+print("8192ゲーム\n1/2を13回当てるゲームだよ。")
+count = 0
+while True:
+    print(f"{count+1}回目。\nあと{13-count}回です。")
+    i = input("青か緑を入力してください。")
+    x = 0 # テストのため、1にしています。
+    if i == "青":
+        i = 0
+    elif i == "緑":
+        i = 1
+    else:
+        print("正しく入力してください。")
+        continue
+    if i == x:
+        print("成功です。(一致)")
+        count += 1
+    else:
+        print("失敗です。(不一致)\n最初に戻ります。")
+        count = 0
+    if count == 13:
+        print("13回当てました。クリアです!")
+        break
