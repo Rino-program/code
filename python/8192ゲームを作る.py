@@ -4,7 +4,7 @@ import random
 print("8192ゲーム\n1/2を13回当てるゲームだよ。")
 count = 0
 while True:
-    print(f"{count+1}回目。\nあと{13-count}回です。\n当てれる確率は 1/{2**count+1} です。")
+    print(f"{count+1}回目。\nあと{13-count}回です。\n当てれる確率は 1/{2**(count+1)} です。")
     i = input("青か緑を入力してください。")
     x = random.randint(0, 1)
     if count == 0 and 2468 == random.randint(1,8192):
