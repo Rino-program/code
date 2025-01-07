@@ -24,6 +24,8 @@ maze = [
 ]
 start = (0, 0)  # スタート地点 (行, 列)
 end = (19, 19)    # ゴール地点 (行, 列)
+
+# 周りの壁を追加
 trueend = ((end[0]+1, end[1]+1))
 truestart = ((start[0]+1, start[1]+1))
 
@@ -50,6 +52,7 @@ new_maze[stack[0][1]][stack[0][0]] = 's'
 
 keep_maze = dc(new_maze)
 
+# 距離を求める
 distance = 1
 while trueend not in stack:
     for x, y in stack:
@@ -117,6 +120,8 @@ for i in keep_maze:
             i[i.index(j)] = 3
 
 keep_maze[trueend[1]][trueend[0]] = 4
+
+print("0=空白, 1=壁, 2=最短経路, 3=スタート地点, 4=ゴール地点")
 
 # マップを出力
 for row in keep_maze:
