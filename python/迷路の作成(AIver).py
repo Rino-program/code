@@ -12,13 +12,13 @@ def generate_maze(size, wall_prob):
         maze.append(row)
     return maze
 
-size = 20
-wall_prob = 0.3
+size = 30
+wall_prob = 0.4
 
 maze = generate_maze(size, wall_prob)
 
 for row in maze:
-    print(row)
+    print(f"    {row}")
 
 start = (0, 0)
 goal = (size-19, size-19)
