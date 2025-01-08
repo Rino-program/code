@@ -1,6 +1,0 @@
-Hello, World!
-This is a sample text file.
-It contains multiple lines.
-Each line has some text.
-The purpose of this file is to test the Python code.
-Have a great day!
