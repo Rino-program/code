@@ -17,6 +17,7 @@ def f(li):
                 for k in range(1,10):
                     if not k in li[i] and not k in [li[l][j] for l in range(9)] and not k in [li[l][m] for l in range(i//3*3,i//3*3+3) for m in range(j//3*3,j//3*3+3)]:
                         li[i][j] = k
-x = f(x)
-for i in range(9):
-    print(x[i])
+print(f(x))
+#x = f(x)
+#for i in range(9):
+#    print(x[i])
