@@ -11,6 +11,7 @@ x=[
     [4, 0, 0, 7, 3, 5, 0, 2, 0]
 ]
 
+# チェック
 def check(a, b, li, k):
     for i in range(9):
         if li[a][i] == k or li[i][b] == k:
@@ -21,7 +22,8 @@ def check(a, b, li, k):
             if li[i][j] == k:
                 return False
     return True
-    
+
+# 計算
 def f(li):
     for a in range(9):
         for b in range(9):
@@ -35,6 +37,7 @@ def f(li):
                 return False
     return True
 
+# 表示
 if f(x):
     for row in x:
         print(row)
