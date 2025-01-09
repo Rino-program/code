@@ -10,14 +10,33 @@ x=[
     [0, 5, 0, 0, 2, 0, 0, 9, 0],
     [4, 0, 0, 7, 3, 5, 0, 2, 0]
 ]
-def f(li):
+
+def check(a, b, li, k):
     for i in range(9):
-        for j in range(9):
-            if li[i][j]==0:
-                for k in range(1,10):
-                    if not k in li[i] and not k in [li[l][j] for l in range(9)] and not k in [li[l][m] for l in range(i//3*3,i//3*3+3) for m in range(j//3*3,j//3*3+3)]:
-                        li[i][j] = k
-print(f(x))
-#x = f(x)
-#for i in range(9):
-#    print(x[i])
+        if li[a][i] == k or li[i][b] == k:
+            return False
+    start_a, start_b = 3 * (a // 3), 3 * (b // 3)
+    for i in range(start_a, start_a + 3):
+        for j in range(start_b, start_b + 3):
+            if li[i][j] == k:
+                return False
+    return True
+    
+def f(li):
+    for a in range(9):
+        for b in range(9):
+            if li[a][b] == 0:
+                for k in range(1, 10):
+                    if check(a, b, li, k):
+                        li[a][b] = k
+                        if f(li):
+                            return True
+                        li[a][b] = 0
+                return False
+    return True
+
+if f(x):
+    for row in x:
+        print(row)
+else:
+    print("No solution exists")
