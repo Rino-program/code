@@ -1,6 +1,3 @@
-#うまく動きません。
-#アンコウ先生教えて〜
-#というかaiと一緒にやったせいで見にくすぎる。
 from copy import deepcopy as dc
 
 puzzle = [
