@@ -1,5 +1,7 @@
 from copy import deepcopy as dc
 
+#puzzleに最初の状態を入れてください。
+#goalには目標とする状態を入れてください。
 puzzle = [
     [2, 7, 1],
     [0, 8, 6],
