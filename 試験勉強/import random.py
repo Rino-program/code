@@ -1,6 +1,6 @@
 import random
 
-card = list(map(str, list(range(10))))
+card = [str(i) for i in range(10)]
 print(card)
 
 # カードを決定する。
@@ -19,4 +19,4 @@ while True:
     except:
         print("正しく数字を入力できていないようです。")
         continue
-    print(len(inp & num.split("")))
+    print(f"BITE:{len(set(inp) & set(num))}")
