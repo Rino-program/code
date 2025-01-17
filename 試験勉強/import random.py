@@ -4,7 +4,7 @@ card = [str(i) for i in range(10)]
 print(card)
 
 # カードを決定する。
-length = 3
+length = int(input("桁数を入力(1-10):"))
 random.shuffle(card)
 num = "".join(card[:length])
 
