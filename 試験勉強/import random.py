@@ -10,7 +10,9 @@ num = "".join(card[:3])
 print("ヌメロンゲーム。")
 
 # 正解するまで入力を受け取り、適切な答えを返す。
+count = 0
 while True:
+    count += 1
     inp = input("数字を入力:")
     if len(inp) != 3:
         inp = "a"
@@ -19,4 +21,18 @@ while True:
     except:
         print("正しく数字を入力できていないようです。")
         continue
-    print(f"BITE:{len(set(inp) & set(num))}")
+    eat = 0
+    i = 0
+    while len(inp) != i:
+        try:
+            if inp[i] == num[i]:
+                eat += 1
+                inp = inp[: i - 1] + inp[i + 1:]
+                i -= 1
+        except:
+            break
+        i += 1
+    print(f"EAT:{eat}\nBITE:{len(set(inp) & set(num))}")
+    if eat == len(num):
+        break
+print(f"成功です！\nあなたは答えを出すのに{count}回かかりました！")
