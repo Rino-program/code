@@ -21,18 +21,9 @@ while True:
     except:
         print("正しく数字を入力できていないようです。")
         continue
-    eat = 0
-    i = 0
-    while len(inp) != i:
-        try:
-            if inp[i] == num[i]:
-                eat += 1
-                inp = inp[: i - 1] + inp[i + 1:]
-                i -= 1
-        except:
-            break
-        i += 1
-    print(f"EAT:{eat}\nBITE:{len(set(inp) & set(num))}")
+    eat = sum(1 for i in range(3) if inp[i] == num[i])
+    bite = sum(1 for i in range(3) if inp[i] != num[i] and inp[i] in num)
+    print(f"EAT:{eat}\nBITE:{bite}")
     if eat == len(num):
         break
 print(f"成功です！\nあなたは答えを出すのに{count}回かかりました！")
