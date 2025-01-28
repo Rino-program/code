@@ -76,7 +76,7 @@ def kill_mino(a, x, y, HP):
         return 1 #倒せる、なんかい
     else:
         if a * x <= y:  # ダメでした
-            return 0  # 倒せない 
+            return 0  # 倒せない
         else:
             return 1  # 倒せるが、何回かかるかわからない→計算する
 if kill_mino(a, x, y, HP) == 0:
