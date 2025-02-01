@@ -31,7 +31,7 @@ def tngrs(numa, numb, numc):
         if isinstance(numc, str):
             return numc
     if x_index > 6 or x_index < 3:
-        return "エラーです。(パターン1)"
+        return "エラー：数字ではない可能性があります。"
     match x_index:
         case 3:
             cr = numc - numb
@@ -39,26 +39,27 @@ def tngrs(numa, numb, numc):
             cr = numc - numa
         case 5:
             cr = numa + numb
-        case _:
-            return "エラーです。(パターン2)"
-    if cr ** (1 / 2) == int(cr ** (1 / 2)):
-        return cr ** (1 / 2)
-    else:
-        def ease_root(n):
-            i = 2
-            a = 1
-            while (i ** 2) <= n:
-                if n % (i ** 2) == 0:
-                    n //= (i ** 2)
-                    a *= i
+    try:
+        if cr ** (1 / 2) == int(cr ** (1 / 2)):
+            return cr ** (1 / 2)
+        else:
+            def ease_root(n):
+                i = 2
+                a = 1
+                while (i ** 2) <= n:
+                    if n % (i ** 2) == 0:
+                        n //= (i ** 2)
+                        a *= i
+                    else:
+                        i += 1
+                if n == 1:
+                    return a
+                elif a == 1:
+                    return f"√{n}"
                 else:
-                    i += 1
-            if n == 1:
-                return a
-            elif a == 1:
-                return f"√{n}"
-            else:
-                return f"{a}√{n}"
+                    return f"{a}√{n}"
         return ease_root(cr)
+    except:
+        return "エラー：直角三角形が存在しない可能性があります。"
 an, bn, cn = input("aを入力"), input("bを入力"), input("cを入力")
 print(tngrs(an, bn, cn))
