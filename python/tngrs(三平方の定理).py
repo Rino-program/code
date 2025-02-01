@@ -5,7 +5,7 @@ def tngrs(numa, numb, numc):
             return int(a[1:])
         else:
             try:
-                return int(a) ** 2 # ここで二乗
+                return int(a) ** 2
             except:
                 if "√" in a:
                     nums =a.split("√")
@@ -31,14 +31,17 @@ def tngrs(numa, numb, numc):
         if isinstance(numc, str):
             return numc
     if x_index > 6 or x_index < 3:
-        return "エラー：数字ではない可能性があります。"
-    match x_index:
-        case 3:
-            cr = numc - numb
-        case 4:
-            cr = numc - numa
-        case 5:
-            cr = numa + numb
+        return "エラー：引数が不正です。"
+    try:
+        match x_index:
+            case 3:
+                cr = numc - numb
+            case 4:
+                cr = numc - numa
+            case 5:
+                cr = numa + numb
+    except:
+        return "エラー：計算できません。"
     try:
         if cr ** (1 / 2) == int(cr ** (1 / 2)):
             return cr ** (1 / 2)
