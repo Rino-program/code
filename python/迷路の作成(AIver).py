@@ -18,7 +18,7 @@ wall_prob = 0.4
 maze = generate_maze(size, wall_prob)
 
 for row in maze:
-    print(f"    {row}")
+    print(f"    {row},")
 
 start = (0, 0)
 goal = (size-19, size-19)

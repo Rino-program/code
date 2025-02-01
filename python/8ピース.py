@@ -3,9 +3,9 @@ from copy import deepcopy as dc
 #puzzleに最初の状態を入れてください。
 #goalには目標とする状態を入れてください。
 puzzle = [
-    [2, 5, 3],
-    [6, 0, 1],
-    [4, 8, 7]
+    [2, 0, 4],
+    [3, 5, 8],
+    [1, 6, 7]
 ]
 queue = [puzzle]
 next_queue = []
