@@ -31,7 +31,7 @@ def tngrs(numa, numb, numc):
         if isinstance(numc, str):
             return numc
     if x_index > 6 or x_index < 3:
-        return "エラー：引数が不正です。"
+        return "エラー：引数の数が正しくありません。"
     try:
         match x_index:
             case 3:
