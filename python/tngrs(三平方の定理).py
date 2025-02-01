@@ -64,5 +64,6 @@ def tngrs(numa, numb, numc):
         return ease_root(cr)
     except:
         return "エラー：直角三角形が存在しない可能性があります。"
+print("a^2 + b^2 = c^2 の a,b,c を入力してください。\n求めたい文字には入力しないでください。")
 an, bn, cn = input("aを入力"), input("bを入力"), input("cを入力")
 print(tngrs(an, bn, cn))
