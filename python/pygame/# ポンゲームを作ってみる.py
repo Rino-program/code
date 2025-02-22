@@ -10,9 +10,9 @@
 〜改善〜
 1. 反射の時にもう少し乱数を加えて予測を少し難しくする
 2. ボールを少しずつ加速させる。ただし、プレイヤーが跳ね返した時のみ。また、一試合ごとにリセットさせる
-3. ボールとプレーヤーが一体化しないようにする
-4. 一人用にほどほどに勝てそうな対戦相手(bot)を作る
-5. 演出をもっと考える(追加)
+3. 一人用にほどほどに勝てそうな対戦相手(bot)を作る
+4. 演出をもっと考える(追加)
+5. ボールが斜めにしか動かない
 """
 
 import pygame
@@ -86,8 +86,10 @@ while True:
     # ボールの当たり判定
     if boll.top <= 0 or boll.bottom >= 600:
         boll_dy *= -1
-    if boll.colliderect(player_A) or boll.colliderect(player_B):
-        boll_dx *= -1
+    if boll.colliderect(player_A):
+        boll_dx = boll_speed
+    if boll.colliderect(player_B):
+        boll_dx = -boll_speed
     if boll.left <= 0:
         score["player_B"] += 1
         boll.x = 395
