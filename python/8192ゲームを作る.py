@@ -5,14 +5,14 @@ print("8192ゲーム\n1/2を13回当てるゲームだよ。")
 count = 0
 while True:
     print(f"{count+1}回目。\nあと{13-count}回です。\n当てれる確率は 1/{2**(count+1)} です。")
-    i = input("青か緑を入力してください。")
+    i = input("青か緑を入力してください。(0 or 1 でも可)")
     x = ran(0, 1)
     if count == 0 and 2468 == ran(1,8192):
         print("あなたは8192分の1を当てました!(裏ルート)")
         break
-    if i == "青":
+    if i == "青" or 0:
         i = 0
-    elif i == "緑":
+    elif i == "緑" or 1:
         i = 1
     else:
         print("正しく入力してください。")
