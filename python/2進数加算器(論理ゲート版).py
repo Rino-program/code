@@ -10,11 +10,11 @@ def full(x, y, a):
     return sum2, carry_out
 
 def calculation(x, y):
-    sum1, carry1 = half(x[0], y[0])
-    sum2, carry2 = full(x[1], y[1], carry1)
+    sum1, carry1 = half(x[4], y[4])
+    sum2, carry2 = full(x[3], y[3], carry1)
     sum3, carry3 = full(x[2], y[2], carry2)
-    sum4, carry4 = full(x[3], y[3], carry3)
-    sum5, carry5 = full(x[4], y[4], carry4)
+    sum4, carry4 = full(x[1], y[1], carry3)
+    sum5, carry5 = full(x[0], y[0], carry4)
     return [sum1, sum2, sum3, sum4, sum5, carry5]
 
 def main():
@@ -25,7 +25,7 @@ def main():
     y2 = [int(i) for i in y1.zfill(5)]
     result = calculation(x2, y2)
     result_str = "".join(map(str, result[::-1]))  # 逆順にして表示
-    print("2進数：\n{} + {} = {}".format(x1, y1, result_str))
+    print("計算結果：{} + {} = {}".format(x1, y1, result_str))
 
 if __name__ == "__main__":
     main()
