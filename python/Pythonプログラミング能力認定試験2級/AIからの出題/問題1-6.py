@@ -19,7 +19,7 @@ x = 0
 if (n == 2 and n % 2 == 0) or n == 1:
     x = 1
 else:
-    for i in range(3,sqrt(n) + 1,2):
+    for i in range(3,int(sqrt(n)) + 1,2):
         if n % i == 0:
             x = 1
 print("素数です" if x == 0 else "素数ではありません")
