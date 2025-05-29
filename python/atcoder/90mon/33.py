@@ -17,8 +17,8 @@ new_maze.append(["0"]*(len(maze[0])+2))
 
 s = 0
 
-for j in range(1, h + 1):
-    for i in range(1, w + 1):
+for j in range(1, w + 1):
+    for i in range(1, h + 1):
         n = 0
         for k in range(-1, 2):
             for m in range(-1, 2):
@@ -31,3 +31,5 @@ for j in range(1, h + 1):
             new_maze[i][j] = "#"
             s += 1
 print(s)
+for row in new_maze:
+    print("".join(row))
