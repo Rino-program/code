@@ -14,7 +14,7 @@ while x not in queue:
         if len(i) < len(x):
             if i not in queue_top:
                 next_queue.append(i + "0")
-        if i and len(i) > len(x) // 2 - 1:
+        if i:
             for j in i:
                 if j == "9":
                     b += "0"
